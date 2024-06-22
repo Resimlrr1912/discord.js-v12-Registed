@@ -4,7 +4,7 @@ const ayarlar = require('../ayarlar.json');
 require("../inlinereply");
 
     exports.run = async(client, message, args) => {
-        if(!message.member.roles.cache.has('855901019522727958')){
+        if(!message.member.roles.cache.has('1254173362880512010')){
             const hata = new Discord.MessageEmbed()
             .setDescription(`❌ • Bu komutu kullanmak için yeterli yetkiye sahip değilsin!`)
             .setColor('#ff0000')
@@ -41,9 +41,9 @@ require("../inlinereply");
         
 
         if(kullanıcı && isim && yas){
-            kullanıcı.roles.remove(['855900979325435934'])
+            kullanıcı.roles.remove(['1254173362880512010'])
             kullanıcı.setNickname(buyukHarf(isim) + " | " + yas)
-            kullanıcı.roles.add(['855901417470820372'])
+            kullanıcı.roles.add(['1254173362880512010'])
 
             const basarili = new Discord.MessageEmbed()
             .setTitle("✅ • KAYIT BAŞARILI")
@@ -51,7 +51,7 @@ require("../inlinereply");
             .addFields(
                 { name: "Kullanıcı", value: kullanıcı, inline: true },
                 { name: "Yetkili", value: message.author, inline: true },
-                { name: "Verilen Rol", value: "<@&855901417470820372>", inline: true }
+                { name: "Verilen Rol", value: "<@&1254173362880512010>", inline: true }
             )
             .setColor('GREEN')
             message.inlineReply(basarili)
@@ -61,7 +61,7 @@ require("../inlinereply");
 
         let member = message.mentions.users.first()
 
-        client.channels.cache.get("855554326767468587").send(`${member}`).then(msg => msg.delete({timeout: 3000}));
+        client.channels.cache.get("1254173362880512010").send(`${member}`).then(msg => msg.delete({timeout: 3000}));
         }
     }
 
