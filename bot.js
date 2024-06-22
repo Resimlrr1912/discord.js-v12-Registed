@@ -204,3 +204,19 @@ client.on("error", e => {
 });
 
 client.login(ayarlar.token);
+
+client.on('interactionCreate', async interaction => {
+    if (!interaction.isButton()) return;
+
+    if (interaction.customId === 'yetkiliCagir') {
+        // Burada yetkiliyi çağırma işlemi yapılır.
+        const yetkiliRoleId = 'YETKILI_ROL_ID'; // Yetkili rol ID'sini buraya ekleyin
+        const yetkiliRole = interaction.guild.roles.cache.get(yetkiliRoleId);
+
+        if (yetkiliRole) {
+            interaction.reply(`Yetkili çağırıldı: ${yetkiliRole}`);
+        } else {
+            interaction.reply('Yetkili rolü bulunamadı.');
+        }
+    }
+});
