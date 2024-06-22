@@ -4,7 +4,7 @@ const ayarlar = require('../ayarlar.json');
 require("../inlinereply");
 
     exports.run = async(client, message, args) => {
-        if(!message.member.roles.cache.has('855901055992332308')){
+        if(!message.member.roles.cache.has('1254173362880512010')){
             const hata = new Discord.MessageEmbed()
             .setDescription(`❌ • Bu komutu kullanmak için yeterli yetkiye sahip değilsin!`)
             .setColor('#ff0000')
