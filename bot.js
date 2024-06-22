@@ -18,13 +18,9 @@ const log = message => {
 // BOTUN ALTYAZISI //
 client.on("ready", () => {
   // Eğer botunuzun bir ses kanalında görünmesini istiyorsanız alttaki satırın başındaki ve sonundaki // işaretlerini silin
-  client.channels.cache.get("855554326767468588").join(); //
+  client.channels.cache.get("1254161874166091909").join(); //
   var altyazı = [
-    `Instagram: @benakifdora`,
-	  `Twitter: @akifdora`,
-    `TikTok: @akifdora`,
-    `Youtube: Akif DORA`,
-    `Twitch: akifdora`
+
   ];
   setInterval(function() {
     var random = Math.floor(Math.random() * altyazı.length);
@@ -65,9 +61,9 @@ client.on('guildMemberAdd', async member => {
   db.add(`${member.guild.id}_${member.id}_girmismi`, 1)
 
   member.roles.add(("855900979325435934"));
-  let kanal = "855554326767468587";
-  let teyityetkili = "855901019522727958";
-  let sunucuismi = "A k i f  D O R A  -  Y o u t u b e"
+  let kanal = "1254161520578007170";
+  let teyityetkili = "1254117183483805697";
+  let sunucuismi = "L A V B İ N M R "
   let cmfzaman = new Date().getTime() - member.user.createdAt.getTime();
   let cmfzaman2 = new Date().getTime() - member.user.createdAt.getTime();
   let girmismi = db.fetch(`${member.guild.id}_${member.id}_girmismi`)
@@ -210,7 +206,7 @@ client.on('interactionCreate', async interaction => {
 
     if (interaction.customId === 'yetkiliCagir') {
         // Burada yetkiliyi çağırma işlemi yapılır.
-        const yetkiliRoleId = 'YETKILI_ROL_ID'; // Yetkili rol ID'sini buraya ekleyin
+        const yetkiliRoleId = '1254173362880512010'; // Yetkili rol ID'sini buraya ekleyin
         const yetkiliRole = interaction.guild.roles.cache.get(yetkiliRoleId);
 
         if (yetkiliRole) {
