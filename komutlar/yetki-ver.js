@@ -6,8 +6,8 @@ const ayarlar = require('../ayarlar.json');
 exports.run = async (client, message, args) => {
   var gün = [moment().format('DD.MM.YYYY | H:mm:ss')]
 let member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-if (!message.member.roles.cache.has("855901055992332308"))
-return message.channel.send(new Discord.MessageEmbed().setDescription(`❌ • Bu komutu kullanabilmek için <@&855901055992332308> olmalısın!`)).then(msg => msg.delete({timeout: 5000}));
+if (!message.member.roles.cache.has("1254173362880512010"))
+return message.channel.send(new Discord.MessageEmbed().setDescription(`❌ • Bu komutu kullanabilmek için <@&1254173362880512010> olmalısın!`)).then(msg => msg.delete({timeout: 5000}));
 if (!member) return message.channel.send(new Discord.MessageEmbed().setDescription('❌ • Kime rol vereceğim etiketlesene o_O')).then(msg => msg.delete({timeout: 5000}));
   if (message.member.roles.highest.comparePositionTo("855901019522727958") < 1) {
   return message.channel.send(new Discord.MessageEmbed().setDescription(`❌ • Verilecek rol senin rolünün altında olmalı akıllı bıdık seni :)`)).then(msg => msg.delete({timeout: 5000}));
