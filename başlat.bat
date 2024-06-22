@@ -1,4 +1,4 @@
-title BOT_ISMI
+title ꆜ・LavbinMR Bots
 echo off
 color 0f
 cls
